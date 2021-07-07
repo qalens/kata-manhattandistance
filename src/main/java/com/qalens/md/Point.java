@@ -10,6 +10,6 @@ public class Point {
     }
 
     public int distanceFrom(Point b) {
-        throw new UnsupportedOperationException("Not Yet implemented");
+        return Math.abs(x-b.x);
     }
 }
