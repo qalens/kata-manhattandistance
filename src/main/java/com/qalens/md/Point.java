@@ -10,6 +10,6 @@ public class Point {
     }
 
     public int distanceFrom(Point b) {
-        return Math.abs(x-b.x);
+        return Math.abs(x-b.x)+Math.abs(y-b.y);
     }
 }
