@@ -46,4 +46,21 @@ public class PointTest {
         Point p2=new Point(x,y2);
         Assertions.assertEquals(expected,p1.distanceFrom(p2));
     }
+    @ParameterizedTest
+    @CsvSource({
+            "3,3,6,6,6",
+            "3,3,6,-6,12",
+            "3,3,-6,6,12",
+            "3,-3,6,6,12",
+            "-3,3,6,6,12",
+            "3,3,-6,-6,18",
+            "3,-3,-6,6,18",
+            "-3,-3,6,6,18",
+            "-3,3,6,-6,18",
+    })
+    void shouldCalculateXYDistanceProperly(int x1,int y1,int x2,int y2,int expected){
+        Point p1=new Point(x1,y1);
+        Point p2=new Point(x2,y2);
+        Assertions.assertEquals(expected,p1.distanceFrom(p2));
+    }
 }
