@@ -8,4 +8,8 @@ public class Point {
         this.x = x;
         this.y = y;
     }
+
+    public int distanceFrom(Point b) {
+        throw new UnsupportedOperationException("Not Yet implemented");
+    }
 }
